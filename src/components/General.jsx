@@ -1,27 +1,33 @@
-function General(generalInfo) {
+function General(generalInfo, handleNameChange, handleMailChange, handlePhoneChange) {
     return(
         <div className="general-form">
             <label>
                 Name
                 {''}
                 <input
-                    type="text"
+                    value={generalInfo.name}
+                    onChange={handleNameChange}
                 />
             </label>
             <label>
                 Email
                 {''}
                 <input
-                    type="text"
+                    value={generalInfo.mail}
+                    onChange={handleMailChange}
                 />
             </label>
             <label>
                 Phone
                 {''}
                 <input
-                    type="text"
+                    value={generalInfo.phone}
+                    onChange={handlePhoneChange}
                 />
             </label>
+            <button className="submit-btn" type="submit" >
+            Submit
+            </button>
         </div>
     )
 }
