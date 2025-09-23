@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import General from './components/General'
 import Education from './components/Education'
+import Experience from './components/Experience'
 
 function App() {
   const [isSubmit, setIsSubmit] = useState(false);
@@ -20,6 +21,10 @@ function App() {
         isSubmit={isSubmit}
        />
        <Education
+        handleSubmit={handleSubmit}
+        isSubmit={isSubmit}
+       />
+       <Experience
         handleSubmit={handleSubmit}
         isSubmit={isSubmit}
        />
