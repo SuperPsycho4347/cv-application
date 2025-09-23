@@ -11,6 +11,7 @@ export default function Experience(props) {
 
     return(
         <form onSubmit={handleSubmit}>
+           {!isSubmit ? <div>
             <label>
                 Company Name:
                 <input type="text" 
@@ -30,6 +31,7 @@ export default function Experience(props) {
                     disabled={isSubmit ? true : false}
                 />
             </label>
+            </div> : null}
             <h1>{isSubmit && compName}</h1>
             <button>{isSubmit ? 'Edit' : 'Submit'}</button>
         </form>
