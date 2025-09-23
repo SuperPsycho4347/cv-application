@@ -7,7 +7,8 @@ export default function General(props) {
     const [phone, setPhone] = useState("");
 
     return (
-        <form onSubmit={props.handleSubmit}>
+        <div>
+            <form onSubmit={props.handleSubmit}>
             <label>
                 Name:
                 <input type="text"
@@ -35,6 +36,8 @@ export default function General(props) {
             <button 
                 type="submit"
             >{props.isSubmit ? 'Edit' : 'Submit'}</button>   
-        </form>
+            </form>
+            <h1>{props.isSubmit && {name}}</h1>
+        </div>
     )
 }

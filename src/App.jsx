@@ -7,26 +7,24 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 
 function App() {
-  const [isSubmit, setIsSubmit] = useState(false);
+  // const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsSubmit(!isSubmit);
-  }
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setIsSubmit(!isSubmit);
+  // }
 
   return (
     <div >
-      <General 
+      {/* <General 
         handleSubmit={handleSubmit}
         isSubmit={isSubmit}
-       />
-       <Education
+       /> */}
+       {/* <Education
         handleSubmit={handleSubmit}
         isSubmit={isSubmit}
-       />
+       /> */}
        <Experience
-        handleSubmit={handleSubmit}
-        isSubmit={isSubmit}
        />
     </div>
   )
