@@ -1,16 +1,24 @@
-import { useState } from 'react'
+import { use, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import General from './components/General'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmit(!isSubmit);
+  }
 
   return (
-    <>
-      <General />
-    </>
+    <div >
+      <General 
+        handleSubmit={handleSubmit}
+        isSubmit={isSubmit}
+       />
+    </div>
   )
 }
 
