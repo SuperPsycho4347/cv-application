@@ -41,7 +41,7 @@ export default function General() {
             </label>
             <button 
                 type="submit"
-            >Submit</button>
+            >{isSubmit ? 'Edit' : 'Submit'}</button>   
         </form>
     )
 }
