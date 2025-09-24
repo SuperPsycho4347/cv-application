@@ -7,7 +7,7 @@ export default function General(props) {
     const [phone, setPhone] = useState("");
 
     return (
-        <div>
+        <div className="info-container">
             <form className='form' onSubmit={props.handleSubmit}>
             {!props.isSubmit ? <div className="form-card">
             <label>

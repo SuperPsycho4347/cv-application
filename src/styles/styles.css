@@ -10,7 +10,7 @@ html, body, #root {
     margin: 0;
     padding: 0;
     font-family: 'Alan Sans';
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: lighter;
 }
 
@@ -74,12 +74,24 @@ button:active {
     outline: none;
 }
 
+.info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    gap: 1rem;
+    font-weight: bold;
+}
+
 .info-card {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 2rem;
+    margin: 2rem;
     border-radius: 14px;
     align-items: center;
+    background-color: white;
+    color: black;
 }
