@@ -1,12 +1,19 @@
+/* Font importts */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Alan Sans';
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
 .container {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .form {
@@ -19,4 +26,24 @@
 .form-card {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 1.5rem;
+    background-color: white;
+    border-radius: 14px;
+}
+
+label {
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+}
+
+input {
+    border-radius: 15px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
 }
