@@ -7,12 +7,12 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 
 function App() {
-  // const [isSubmit, setIsSubmit] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setIsSubmit(!isSubmit);
-  // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmit(!isSubmit);
+  }
 
   return (
     <div >
@@ -25,6 +25,8 @@ function App() {
         isSubmit={isSubmit}
        /> */}
        <Experience
+        handleSubmit={handleSubmit}
+        isSubmit={isSubmit}
        />
     </div>
   )

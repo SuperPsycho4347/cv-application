@@ -1,39 +1,46 @@
 import { useState } from "react"
 
 export default function Experience(props) {
+    // State variables
     const [compName, setCompName] = useState('')
-    const [isSubmit, setIsSubmit] = useState(false)
+    const [posTitle, setPosTitle] = useState('')
+    const [mainResp, setMainResp] = useState('')
+    // const [isSubmit, setIsSubmit] = useState(false)
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setIsSubmit(!isSubmit)
-    }
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     setIsSubmit(!isSubmit)
+    // }
 
     return(
-        <form onSubmit={handleSubmit}>
-           {!isSubmit ? <div>
+        <form onSubmit={props.handleSubmit}>
+           {!props.isSubmit ? <div>
             <label>
                 Company Name:
                 <input type="text" 
                     onChange={(e) => setCompName(e.target.value)}
-                    disabled={isSubmit ? true : false}
+                    disabled={props.isSubmit ? true : false}
                 />
             </label>
             <label>
                 Position Title:
                 <input type="text" 
-                    disabled={isSubmit ? true : false}
+                    disabled={props.isSubmit ? true : false}
+                    onChange={(e) => setPosTitle(e.target.value)}
                 />
             </label>
             <label>
                 Main Responsibilities:
                 <input type="text" 
-                    disabled={isSubmit ? true : false}
+                    disabled={props.isSubmit ? true : false}
+                    onChange={(e) => setMainResp(e.target.value)}
                 />
             </label>
             </div> : null}
-            <h1>{isSubmit && compName}</h1>
-            <button>{isSubmit ? 'Edit' : 'Submit'}</button>
+            <h3>{props.isSubmit && 'Company Name: ' + compName}</h3>
+            <h3>{props.isSubmit && 'Position Title: ' + posTitle}</h3>
+            <h3>{props.isSubmit && 'Main Responsibilities: ' + mainResp}</h3>
+            <button>{props.isSubmit ? 'Edit' : 'Submit'}</button>
         </form>
     )
 }
