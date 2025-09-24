@@ -16,7 +16,7 @@ html, body, #root {
 
 .container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: center;
@@ -49,8 +49,22 @@ label {
 input {
     border-radius: 15px;
     border: none;
+    padding: 0.2rem;
 }
 
 input:focus {
+    outline: none;
+}
+
+button {
+    border-radius: 14px;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+}
+
+button:focus,
+button:hover,
+button:active {
     outline: none;
 }

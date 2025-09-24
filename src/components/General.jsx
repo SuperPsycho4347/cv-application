@@ -31,9 +31,11 @@ export default function General(props) {
                 />
             </label>
             </div> : null}
+            <div className="info-card">
             <h3>{props.isSubmit && 'Name: ' + name}</h3>
             <h3>{props.isSubmit && 'Mail: ' + email}</h3>
             <h3>{props.isSubmit && 'Phone: ' + phone}</h3>
+            </div>
             </form>
     )
 }
