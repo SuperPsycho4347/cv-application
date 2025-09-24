@@ -7,12 +7,11 @@ export default function General(props) {
     const [phone, setPhone] = useState("");
 
     return (
-        <div>
             <form onSubmit={props.handleSubmit}>
+            {!props.isSubmit ? <div>
             <label>
                 Name:
                 <input type="text"
-                value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={props.isSubmit ? true: false}
                 />
@@ -20,7 +19,6 @@ export default function General(props) {
             <label>
                 Email:
                 <input type="email"
-                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={props.isSubmit ? true: false}
                 />
@@ -28,16 +26,14 @@ export default function General(props) {
             <label>
                 Phone:
                 <input type="text"
-                value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 disabled={props.isSubmit ? true : false}
                 />
             </label>
-            <button 
-                type="submit"
-            >{props.isSubmit ? 'Edit' : 'Submit'}</button>   
+            </div> : null}
+            <h3>{props.isSubmit && 'Name: ' + name}</h3>
+            <h3>{props.isSubmit && 'Mail: ' + email}</h3>
+            <h3>{props.isSubmit && 'Phone: ' + phone}</h3>
             </form>
-            <h1>{props.isSubmit && {name}}</h1>
-        </div>
     )
 }

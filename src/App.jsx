@@ -17,10 +17,10 @@ function App() {
 
   return (
     <div className='container' >
-      {/* <General 
+      <General 
         handleSubmit={handleSubmit}
         isSubmit={isSubmit}
-       /> */}
+       />
        <Education
         handleSubmit={handleSubmit}
         isSubmit={isSubmit}
