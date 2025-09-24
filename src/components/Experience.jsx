@@ -13,6 +13,7 @@ export default function Experience(props) {
     // }
 
     return(
+        <div>
         <form className='form' onSubmit={props.handleSubmit}>
            {!props.isSubmit ? <div className="form-card">
             <label>
@@ -37,12 +38,13 @@ export default function Experience(props) {
                 />
             </label>
             </div> : null}
-            <div className="info-card">
+            <button>{props.isSubmit ? 'Edit' : 'Submit'}</button>
+        </form>
+            {props.isSubmit ? <div className="info-card">
             <h3>{props.isSubmit && 'Company Name: ' + compName}</h3>
             <h3>{props.isSubmit && 'Position Title: ' + posTitle}</h3>
             <h3>{props.isSubmit && 'Main Responsibilities: ' + mainResp}</h3>
+            </div> : null}
             </div>
-            <button>{props.isSubmit ? 'Edit' : 'Submit'}</button>
-        </form>
     )
 }

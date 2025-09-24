@@ -7,6 +7,7 @@ export default function Education(props) {
     const [gradYear, setGradYear] = useState('');
 
     return (
+        <div>
         <form className='form' onSubmit={props.handleSubmit}>
             {!props.isSubmit ? <div className="form-card">
             <label >
@@ -31,11 +32,12 @@ export default function Education(props) {
                 />
             </label>
             </div> : null}
-            <div className="info-card">
+        </form>
+            {props.isSubmit ? <div className="info-card">
             <h3>{props.isSubmit && 'School Name: ' + schoolName}</h3>
             <h3>{props.isSubmit && 'Subject: ' + subject}</h3>
             <h3>{props.isSubmit && 'Year of Graduation: ' + gradYear}</h3>
-            </div>
-        </form>
+            </div> : null}
+        </div>
     )
 }
