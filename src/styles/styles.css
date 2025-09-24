@@ -5,4 +5,18 @@
 
 .container {
     display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
 }

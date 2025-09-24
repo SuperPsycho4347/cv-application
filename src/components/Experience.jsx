@@ -13,8 +13,8 @@ export default function Experience(props) {
     // }
 
     return(
-        <form onSubmit={props.handleSubmit}>
-           {!props.isSubmit ? <div>
+        <form className='form' onSubmit={props.handleSubmit}>
+           {!props.isSubmit ? <div className="form-card">
             <label>
                 Company Name:
                 <input type="text" 

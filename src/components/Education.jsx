@@ -7,8 +7,8 @@ export default function Education(props) {
     const [gradYear, setGradYear] = useState('');
 
     return (
-        <form onSubmit={props.handleSubmit}>
-            {!props.isSubmit ? <div>
+        <form className='form' onSubmit={props.handleSubmit}>
+            {!props.isSubmit ? <div className="form-card">
             <label >
                 School Name: 
                 <input type="text"
