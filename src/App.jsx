@@ -23,8 +23,6 @@ function App() {
         isSubmit={isSubmit}
        />
        <Experience
-        handleSubmit={handleSubmit}
-        isSubmit={isSubmit}
        />
     </div>
   )

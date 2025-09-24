@@ -5,38 +5,49 @@ export default function Education(props) {
     const [schoolName, setSchoolName] = useState('')
     const [subject, setSubject] = useState('')
     const [gradYear, setGradYear] = useState('');
+    const [isSubmit, setIsSubmit] = useState(false)
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setIsSubmit(!isSubmit);
+    }
 
     return (
         <div className="info-container">
-        <form className='form' onSubmit={props.handleSubmit}>
-            {!props.isSubmit ? <div className="form-card">
+        <form className='form' onSubmit={handleSubmit}>
+            {!isSubmit ? 
+            <div className="form-card">
             <label >
                 School Name: 
                 <input type="text"
-                disabled={props.isSubmit ? true : false}
+                value={schoolName}
+                disabled={isSubmit ? true : false}
                 onChange={(e) => setSchoolName(e.target.value)}
                 />
             </label>
             <label >
                 Subject:
                 <input type="text"
-                disabled={props.isSubmit ? true : false}
+                value={subject}
+                disabled={isSubmit ? true : false}
                 onChange={(e) => setSubject(e.target.value)}
                 />
             </label>
             <label >
                 Graduation:
                 <input type="text"
-                disabled={props.isSubmit ? true : false}
+                disabled={isSubmit ? true : false}
+                value={gradYear}
                 onChange={(e) => setGradYear(e.target.value)}
                 />
             </label>
-            </div> : null}
+            </div> : null} 
+            <button>{isSubmit ? 'Edit' : 'Submit'}</button>
         </form>
-            {props.isSubmit ? <div className="info-card">
-            <h3>{props.isSubmit && 'School Name: ' + schoolName}</h3>
-            <h3>{props.isSubmit && 'Subject: ' + subject}</h3>
-            <h3>{props.isSubmit && 'Year of Graduation: ' + gradYear}</h3>
+            {isSubmit ? <div className="info-card">
+            <h3>{isSubmit && 'School Name: ' + schoolName}</h3>
+            <h3>{isSubmit && 'Subject: ' + subject}</h3>
+            <h3>{isSubmit && 'Year of Graduation: ' + gradYear}</h3>
             </div> : null}
         </div>
     )
