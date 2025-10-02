@@ -6,4 +6,12 @@ A simple application that mimics a CV using React state.
 2. Enables editing of info even after submission.
 
 # Tech:
-Uses basic React state as well as HTML & CSS.
+- React v19
+- HTML
+- CSS
+
+# Getting Started:
+1. Clone the repo:
+```bash
+git clone https://github.com/superpsycho4347/cv-application.git
+cd cv-application```
