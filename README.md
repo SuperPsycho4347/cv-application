@@ -12,6 +12,18 @@ A simple application that mimics a CV using React state.
 
 # Getting Started:
 1. Clone the repo:
-```bash
+```
 git clone https://github.com/superpsycho4347/cv-application.git
-cd cv-application```
+cd cv-application
+```
+
+2. Install dependencies:
+```
+npm install
+
+```
+3. Start it using a development server:
+
+```
+npm run dev
+```
